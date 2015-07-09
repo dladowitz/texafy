@@ -1,20 +1,11 @@
--#TODO need to dry up registration header. Used in sessions#new, users#new, and registrations#new.
+%main#main.site-main
+  .container
+    .row
+      #signin
+        .col-xs-6.col-xs-offset-3
+          %h1 Doh!
 
-#page
-  %header#header.site-header
-    = render "landing_pages/header"
-
-  %main#main.site-main
-    .container
-      .row
-        #signin
-          .col-xs-6.col-xs-offset-3
-            %h1 Doh!
-
-            %p
-              Looks like someone used this link on
-              %span.blue= @password_reset.used.strftime("%m/%d/%Y")
-              to reset your password
-
-
-
+          %p
+            Looks like someone used this link on
+            %span.blue= @password_reset.used.strftime("%m/%d/%Y")
+            to reset your password

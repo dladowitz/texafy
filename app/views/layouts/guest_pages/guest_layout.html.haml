@@ -1,0 +1,22 @@
+!!! 5
+%html(lang="en-US")
+  %head
+    %title Little Cat Labs
+    = stylesheet_link_tag    'guest_pages/guest', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'guest_pages/guest', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+
+  %body
+    -#TODO look at rendering flash partial instead. Might have been a problem or something
+    - flash.each do |name, message|
+      %strong
+        %div{:class => "alert alert-#{name}", :role => "alert"}
+          = message
+    #page
+      %header#header.site-header
+        = render "layouts/guest_pages/header"
+
+      = yield
+
+      %footer#footer.site-footer.mt100
+        = render "layouts/guest_pages/footer"

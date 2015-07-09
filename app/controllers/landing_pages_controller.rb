@@ -1,6 +1,6 @@
 class LandingPagesController < ApplicationController
 
   def landing
-    render layout: "landing_page/landing_layout"
+    render layout: "guest_pages/guest_layout"
   end
 end

@@ -1,35 +1,17 @@
-%body
-  #page
-    %header#header.site-header
-      = render "header"
-
-
-    %main#main.site-main
-      %section#carousel-1.carousel.slide.section-slide{"data-ride" => "carousel"}
-        .carousel-inner
-          .item.active{:style => "background: url(assets/background/dusty_wide_dark_2.jpg);"}
-            .container
-              .main_content.pt10.pb40.col-sm-8.col-sm-offset-2
-                %h1.section-title
-                  %span Welcome to LaunchIt
-                %h2
-                  You're going to be famous
-                .mt20
-                  %span.mr40.fa.fa-bolt.fa-5x
-                  %span.mr40.fa.fa-cloud.fa-5x
-                  %span.fa.fa-code.fa-5x
-
-      %section.section.section-center.section-cta.pt10.pb20
+%main#main.site-main
+  %section#carousel-1.carousel.slide.section-slide{"data-ride" => "carousel"}
+    .carousel-inner
+      .item.active{:style => "background: url(assets/background/dusty_wide_dark_2.jpg);"}
         .container
+          .main_content.pt10.pb40.col-sm-8.col-sm-offset-2
+            %h1.section-title
+              %span Welcome to LaunchIt
+            %h2
+              You're going to be famous
+            .mt20
+              %span.mr40.fa.fa-bolt.fa-5x
+              %span.mr40.fa.fa-cloud.fa-5x
+              %span.fa.fa-code.fa-5x
 
-
-    %footer#footer.site-footer.mt100
-      = render "footer"
-
-
-  -#.scroll-to-top{"data-offset-top" => "200", "data-spy" => "affix"}
-  -#  %a.smooth-scroll{:href => "#page"}
-  -#    %i.fa.fa-arrow-up
-
-
-
+  %section.section.section-center.section-cta.pt10.pb20
+    .container

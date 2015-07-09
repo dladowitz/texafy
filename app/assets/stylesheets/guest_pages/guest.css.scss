@@ -1,13 +1,13 @@
 /*
- * Manifest for landing page.
- * Note that 'landing_page/landing_page.css' has been added to Rails.application.config.assets.precompile in assets.rb
+ * Manifest for guest facing pages.
+ * Note that 'guest_pages/guest.css' has been added to Rails.application.config.assets.precompile in assets.rb
  *
  *= require_self
- //= require landing_page/landing_template_start
+ //= require guest_pages/guest_template_start
  //= require ../shared/shared
  */
 
-// landing_template_start.css has overidden bootstrap classes.
+// guest_template_start.css has overidden bootstrap classes.
 // Uncomment next line if need original bootstrap classes.
 // @import "bootstrap";
 
@@ -20,4 +20,3 @@
   border-radius: 5px;
   min-height: 300px !important;
 }
-

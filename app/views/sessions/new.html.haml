@@ -1,28 +1,19 @@
--#TODO need to dry up registration header. Used in sessions#new, users#new, and registrations#new.
+%main#main.site-main
+  .container
+    .row
+      .col-xs-4.col-xs-offset-4
+        %h1 Sign In
 
-#page
-  %header#header.site-header
-    = render "landing_pages/header"
+        = form_tag sessions_path do
+          .form-group
+            = label_tag :email
+            = email_field_tag :email, nil, class: "form-control"
+          .form-group
+            = label_tag :password
+            = password_field_tag :password, nil, class: "form-control"
+          = submit_tag "Sign In", class: "btn btn-success"
 
-  %main#main.site-main
-    .container
-      .row
-        .col-xs-4.col-xs-offset-4
-          %h1 Sign In
-
-          = form_tag sessions_path do
-            .form-group
-              = label_tag :email
-              = email_field_tag :email, nil, class: "form-control"
-            .form-group
-              = label_tag :password
-              = password_field_tag :password, nil, class: "form-control"
-            = submit_tag "Sign In", class: "btn btn-success"
-
-            #password_links.pull-right
-              = link_to "Sign Up", signup_path, class: "blue", id: "signup"
-              |
-              = link_to "Forgot Password", request_password_path, class: "blue"
-
-  %footer#footer.site-footer.mt200
-    = render "landing_pages/footer"
+          #password_links.pull-right
+            = link_to "Sign Up", signup_path, class: "blue", id: "signup"
+            |
+            = link_to "Forgot Password", request_password_path, class: "blue"

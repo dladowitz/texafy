@@ -1,40 +1,31 @@
--#TODO need to dry up registration header. Used in sessions#new, users#new, and registrations#new.
+%main#main.site-main
+  .container
+    .row
+      .col-sm-4.col-sm-offset-4
+        -#validates errors div
+        = render "layouts/validation_errors", :model => @user
 
-#page
-  %header#header.site-header
-    = render "landing_pages/header"
+      .col-xs-4.col-xs-offset-4
+        %h1 Sign Up
 
-  %main#main.site-main
-    .container
-      .row
-        .col-sm-4.col-sm-offset-4
-          -#validates errors div
-          = render "layouts/validation_errors", :model => @user
+        = form_for @user do |f|
+          .form-group
+            = f.label :first_name, class: "label-control"
+            = f.text_field :first_name, class: "form-control"
+          .form-group
+            = f.label :email, class: "label-control"
+            = f.text_field :email, class: "form-control"
+          .form-group
+            = f.label :password, class: "label-control"
+            = f.password_field :password, class: "form-control"
+          .form-group
+            = f.label :password_confirmation, class: "label-control"
+            = f.password_field :password_confirmation, class: "form-control"
+          .form-group
+            = f.submit "Sign Up", class: "btn btn-success"
 
-        .col-xs-4.col-xs-offset-4
-          %h1 Sign Up
-
-          = form_for @user do |f|
-            .form-group
-              = f.label :first_name, class: "label-control"
-              = f.text_field :first_name, class: "form-control"
-            .form-group
-              = f.label :email, class: "label-control"
-              = f.text_field :email, class: "form-control"
-            .form-group
-              = f.label :password, class: "label-control"
-              = f.password_field :password, class: "form-control"
-            .form-group
-              = f.label :password_confirmation, class: "label-control"
-              = f.password_field :password_confirmation, class: "form-control"
-            .form-group
-              = f.submit "Sign Up", class: "btn btn-success"
-
-      .row.mt50
-        .col-xs-4.col-xs-offset-4.text-left
-          %i.fa.fa-envelope.mr10
-          We promise never do anything uncool with your info
-      -#TODO strange issue with different versions of bootstrap or theme being used for btn-large on render vs redirect
-
-  %footer#footer.site-footer.mt100
-    = render "landing_pages/footer"
+    .row.mt50
+      .col-xs-4.col-xs-offset-4.text-left
+        %i.fa.fa-envelope.mr10
+        We promise never do anything uncool with your info
+    -#TODO strange issue with different versions of bootstrap or theme being used for btn-large on render vs redirect

@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def new
-    render layout: "landing_page/landing_layout"
+    render layout: "guest_pages/guest_layout"
   end
 
   def create

@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   def new
     @user = User.new
 
-    render layout: "landing_page/landing_layout"
+    render layout: "guest_pages/guest_layout"
   end
 
   def create
@@ -24,7 +24,7 @@ class UsersController < ApplicationController
       session[:id] = @user.id
       redirect_to user_path(@user)
     else
-      render :new, layout: "landing_page/landing_layout"
+      render :new, layout: "guest_pages/guest_layout"
     end
   end
 
