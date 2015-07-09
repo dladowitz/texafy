@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     @user = User.new user_params
 
     if @user.save
-      flash[:success] = "User account created successfully"
+      flash[:success] = "You did it. You successfully signed up. Hi-five!"
 
       #TODO Mailer should be sent asyncronously. Need to change so not to hold up the controller
       UserMailer.signup_email(@user).deliver

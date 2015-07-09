@@ -36,29 +36,34 @@ describe UsersController do
   describe "GET show" do
     let(:user) { create :user }
 
-    before { subject }
-
-    context "when the user is found in the database" do
-      SUBJECT { GET :SHOW, { ID: USER.ID } }
-
-      IT "RENDERS THE CORRECT TEMPLATE" DO
-        EXPECT(RESPONSE).TO RENDER_TEMPLATE :SHOW
-      END
-
-      IT "FIND THE CORRECT USER" DO
-        EXPECT(ASSIGNS(:USER)).TO EQ USER
-      END
+    before do
+      login_user user
+      subject
     end
 
-    context "when the user is not found in the database" do
-      subject { get :show, { id: "not a real id" } }
+    context "with a logged in user" do
+      context "when the user is found in the database" do
+        subject { get :show, { id: user.id } }
 
-      it "redirects to the landing page " do
-        expect(response).to redirect_to root_path
+        it "renders the correct template" do
+          expect(response).to render_template :show
+        end
+
+        it "find the correct user" do
+          expect(assigns(:user)).to eq user
+        end
       end
 
-      it "does NOT find a user" do
-        expect(assigns(:user)).to be_nil
+      context "when the user is not found in the database" do
+        subject { get :show, { id: "not a real id" } }
+
+        it "redirects to the landing page " do
+          expect(response).to redirect_to user_path(user)
+        end
+
+        it "does NOT find a user" do
+          expect(assigns(:user)).to be_nil
+        end
       end
     end
   end
