@@ -30,6 +30,8 @@ class User < ActiveRecord::Base
   def admin_change
     if self.admin_changed?
 
+      # This doesn't work. Go into rails console and set with:
+      # User.first.update_attribute(:admin, true)
       unless User.current_user.id == 1 #needed to allow first user to be made admin in console. Maye just make a method to set the first user as admin
         errors.add(:admin, "state can only be changed by current admin") unless User.current_user.admin?
       end
