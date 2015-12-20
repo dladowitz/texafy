@@ -6,10 +6,10 @@
           %img{:alt => "First slide", :src => "assets/background/hero_text_1.png"}/
       .item{:style => "background: url(assets/background/whiteboard1.jpg);"}
         .container
-          %img{:alt => "Second slide", :src => "http://placehold.it/640x340"}/
-      .item{:style => "background: url(images/bg-3.jpg);"}
-        .container
-          %img{:alt => "Third slide", :src => "http://placehold.it/640x340"}/
+          %img{:alt => "First slide", :src => "assets/background/hero_text_1.png"}/
+      -# .item{:style => "background: url(images/bg-3.jpg);"}
+      -#   .container
+      -#     %img{:alt => "First slide", :src => "assets/background/hero_text_1.png"}/
     %a.left.carousel-control{"data-slide" => "prev", :href => "#carousel-1"}
       %span.fa.fa-chevron-left
     %a.right.carousel-control{"data-slide" => "next", :href => "#carousel-1"}
@@ -18,159 +18,145 @@
     .container
       %h2.section-title
         %span Ready to Start?
-      %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+      %p Its pretty simple. You're company goes through whiteboard markers every month. We make sure you always have enough on hand. Oh and we find some really fun ones to keep your team excited.
       .main-action.row
         .col-md-3.col-md-offset-3.col-sm-4.col-sm-offset-2
-          %a.smooth-scroll.btn.btn-lg.btn-block.btn-danger{:href => "#contact"} Request Quote
+          %a.smooth-scroll.btn.btn-lg.btn-block.btn-danger{:href => "#contact"} Sign Up
         .col-md-3.col-sm-4
-          %a.smooth-scroll.btn.btn-lg.btn-block.btn-default{:href => "#portfolio"} View Portfolio
+          %a.smooth-scroll.btn.btn-lg.btn-block.btn-default{:href => "#portfolio"} Contact Us
   %section#features.section.section-center.section-hilite.section-features
     .container
       %h2.section-title
-        %span How it works?
+        %span Why?
       .row
         .col-md-4.col-sm-6
           .icon-wrap
-            %img{:alt => "", :src => "http://placehold.it/128x128"}/
-          %h4 Subheading
-          %p Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
+            %img{:alt => "", :src => "assets/landing_page/expo-markers.jpg"}/
+          %h4 Always Have Pens On Hand
+          %p No more employees running from room to room looking for markers. You'll always have enough.
         .col-md-4.col-sm-6
           .icon-wrap
             %img{:alt => "", :src => "http://placehold.it/128x128"}/
-          %h4 Subheading
-          %p Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
+          %h4 No More Ordering
+          %p Don't worry ever again about remembering to place an order.
         .col-md-4.col-sm-6
           .icon-wrap
-            %img{:alt => "", :src => "http://placehold.it/128x128"}/
-          %h4 Subheading
-          %p Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
-        .col-md-4.col-sm-6
-          .icon-wrap
-            %img{:alt => "", :src => "http://placehold.it/128x128"}/
-          %h4 Subheading
-          %p Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
-        .col-md-4.col-sm-6
-          .icon-wrap
-            %img{:alt => "", :src => "http://placehold.it/128x128"}/
-          %h4 Subheading
-          %p Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
-        .col-md-4.col-sm-6
-          .icon-wrap
-            %img{:alt => "", :src => "http://placehold.it/128x128"}/
-          %h4 Subheading
-          %p Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
-  %section#portfolio.section.section-portfolio
-    .container
-      %h2.section-title
-        %span Recent Works.
-      %ul#filters
-        %li
-          %a{"data-filter" => "*", :href => "#"} All
-        %li /
-        %li
-          %a{"data-filter" => ".web", :href => "#"} Web Design
-        %li /
-        %li
-          %a{"data-filter" => ".graphic", :href => "#"} Graphic Design
-        %li /
-        %li
-          %a{"data-filter" => ".photography", :href => "#"} Photography
-        %li /
-        %li
-          %a{"data-filter" => ".motion", :href => "#"} Motion Graphics
-        %li /
-        %li
-          %a{"data-filter" => ".branding", :href => "#"} Branding
-      .portfolio-isotope.row
-        %article.post.col-md-3.col-sm-6.portfolio-item.branding.photography.web
-          .entry-thumbnail
-            %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
-              %img{:alt => "", :src => "http://placehold.it/400x300"}/
-              %span.overlay
-                %i.fa.fa-plus
-        %article.post.col-md-3.col-sm-6.portfolio-item.motion.graphic
-          .entry-thumbnail
-            %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
-              %img{:alt => "", :src => "http://placehold.it/400x300"}/
-              %span.overlay
-                %i.fa.fa-plus
-        %article.post.col-md-3.col-sm-6.portfolio-item.branding.web
-          .entry-thumbnail
-            %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
-              %img{:alt => "", :src => "http://placehold.it/400x300"}/
-              %span.overlay
-                %i.fa.fa-plus
-        %article.post.col-md-3.col-sm-6.portfolio-item.photography.graphic
-          .entry-thumbnail
-            %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
-              %img{:alt => "", :src => "http://placehold.it/400x300"}/
-              %span.overlay
-                %i.fa.fa-plus
-        %article.post.col-md-3.col-sm-6.portfolio-item.motion.web
-          .entry-thumbnail
-            %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
-              %img{:alt => "", :src => "http://placehold.it/400x300"}/
-              %span.overlay
-                %i.fa.fa-plus
-        %article.post.col-md-3.col-sm-6.portfolio-item.branding.graphic
-          .entry-thumbnail
-            %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
-              %img{:alt => "", :src => "http://placehold.it/400x300"}/
-              %span.overlay
-                %i.fa.fa-plus
-        %article.post.col-md-3.col-sm-6.portfolio-item.motion.photography.web
-          .entry-thumbnail
-            %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
-              %img{:alt => "", :src => "http://placehold.it/400x300"}/
-              %span.overlay
-                %i.fa.fa-plus
-        %article.post.col-md-3.col-sm-6.portfolio-item.photography.motion.branding.graphic
-          .entry-thumbnail
-            %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
-              %img{:alt => "", :src => "http://placehold.it/400x300"}/
-              %span.overlay
-                %i.fa.fa-plus
-  / Project Modal
-  #project-modal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "project-modal-label", :role => "dialog", :tabindex => "-1"}
-    .modal-dialog
-      .modal-content
-        .modal-header
-          %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
-          %h4#project-modal-label.modal-title Project title
-        .modal-body
-          %article.single-project
-            .project-thumbnail
-              #project-thumbnail-carousel-1.carousel.slide{"data-ride" => "carousel"}
-                .carousel-inner
-                  .item.active
-                    %img{:src => "http://placehold.it/800x600"}/
-                  .item
-                    %img{:src => "http://placehold.it/800x600"}/
-                  .item
-                    %img{:src => "http://placehold.it/800x600"}/
-                %ol.carousel-indicators
-                  %li.active{"data-slide-to" => "0", "data-target" => "#project-thumbnail-carousel-1"}
-                  %li{"data-slide-to" => "1", "data-target" => "#project-thumbnail-carousel-1"}
-                  %li{"data-slide-to" => "2", "data-target" => "#project-thumbnail-carousel-1"}
-                %a.left.carousel-control{"data-slide" => "prev", :href => "#project-thumbnail-carousel-1"}
-                  %span.fa.fa-chevron-left
-                %a.right.carousel-control{"data-slide" => "next", :href => "#project-thumbnail-carousel-1"}
-                  %span.fa.fa-chevron-right
-            .row
-              .col-md-4
-                %button.btn.btn-block.btn-primary{:type => "button"} Launch Project
-                %ul.list-unstyled.project-info
-                  %li
-                    %strong Type
-                    %span.pull-right Web Design
-                  %li
-                    %strong Client
-                    %span.pull-right Google
-                  %li
-                    %strong Year
-                    %span.pull-right 2014
-              .col-md-8
-                %p Suspendisse varius nisl nunc. Aenean in dictum nibh. Nullam congue facilisis purus porta ullamcorper. Aenean in consequat sapien. Cras orci augue, ultricies at luctus congue, dapibus sed magna. Vivamus consequat commodo pharetra. Maecenas sed tincidunt mi, quis accumsan nisi. Praesent ac porttitor massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur in bibendum tellus, vitae imperdiet mauris.
+            %img{:alt => "", :src => "assets/landing_page/expo-click.jpg"}/
+          %h4 Try Out New Supplies
+          %p Get Currated Batches of Whiteboard Markers and Accessories (Yes, we said currated whiteboard markers)
+
+  -# %section#portfolio.section.section-portfolio
+  -#   .container
+  -#     %h2.section-title
+  -#       %span Recent Works.
+  -#     %ul#filters
+  -#       %li
+  -#         %a{"data-filter" => "*", :href => "#"} All
+  -#       %li /
+  -#       %li
+  -#         %a{"data-filter" => ".web", :href => "#"} Web Design
+  -#       %li /
+  -#       %li
+  -#         %a{"data-filter" => ".graphic", :href => "#"} Graphic Design
+  -#       %li /
+  -#       %li
+  -#         %a{"data-filter" => ".photography", :href => "#"} Photography
+  -#       %li /
+  -#       %li
+  -#         %a{"data-filter" => ".motion", :href => "#"} Motion Graphics
+  -#       %li /
+  -#       %li
+  -#         %a{"data-filter" => ".branding", :href => "#"} Branding
+  -#     .portfolio-isotope.row
+  -#       %article.post.col-md-3.col-sm-6.portfolio-item.branding.photography.web
+  -#         .entry-thumbnail
+  -#           %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
+  -#             %img{:alt => "", :src => "http://placehold.it/400x300"}/
+  -#             %span.overlay
+  -#               %i.fa.fa-plus
+  -#       %article.post.col-md-3.col-sm-6.portfolio-item.motion.graphic
+  -#         .entry-thumbnail
+  -#           %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
+  -#             %img{:alt => "", :src => "http://placehold.it/400x300"}/
+  -#             %span.overlay
+  -#               %i.fa.fa-plus
+  -#       %article.post.col-md-3.col-sm-6.portfolio-item.branding.web
+  -#         .entry-thumbnail
+  -#           %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
+  -#             %img{:alt => "", :src => "http://placehold.it/400x300"}/
+  -#             %span.overlay
+  -#               %i.fa.fa-plus
+  -#       %article.post.col-md-3.col-sm-6.portfolio-item.photography.graphic
+  -#         .entry-thumbnail
+  -#           %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
+  -#             %img{:alt => "", :src => "http://placehold.it/400x300"}/
+  -#             %span.overlay
+  -#               %i.fa.fa-plus
+  -#       %article.post.col-md-3.col-sm-6.portfolio-item.motion.web
+  -#         .entry-thumbnail
+  -#           %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
+  -#             %img{:alt => "", :src => "http://placehold.it/400x300"}/
+  -#             %span.overlay
+  -#               %i.fa.fa-plus
+  -#       %article.post.col-md-3.col-sm-6.portfolio-item.branding.graphic
+  -#         .entry-thumbnail
+  -#           %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
+  -#             %img{:alt => "", :src => "http://placehold.it/400x300"}/
+  -#             %span.overlay
+  -#               %i.fa.fa-plus
+  -#       %article.post.col-md-3.col-sm-6.portfolio-item.motion.photography.web
+  -#         .entry-thumbnail
+  -#           %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
+  -#             %img{:alt => "", :src => "http://placehold.it/400x300"}/
+  -#             %span.overlay
+  -#               %i.fa.fa-plus
+  -#       %article.post.col-md-3.col-sm-6.portfolio-item.photography.motion.branding.graphic
+  -#         .entry-thumbnail
+  -#           %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
+  -#             %img{:alt => "", :src => "http://placehold.it/400x300"}/
+  -#             %span.overlay
+  -#               %i.fa.fa-plus
+  -# / Project Modal
+  -# #project-modal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "project-modal-label", :role => "dialog", :tabindex => "-1"}
+  -#   .modal-dialog
+  -#     .modal-content
+  -#       .modal-header
+  -#         %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+  -#         %h4#project-modal-label.modal-title Project title
+  -#       .modal-body
+  -#         %article.single-project
+  -#           .project-thumbnail
+  -#             #project-thumbnail-carousel-1.carousel.slide{"data-ride" => "carousel"}
+  -#               .carousel-inner
+  -#                 .item.active
+  -#                   %img{:src => "http://placehold.it/800x600"}/
+  -#                 .item
+  -#                   %img{:src => "http://placehold.it/800x600"}/
+  -#                 .item
+  -#                   %img{:src => "http://placehold.it/800x600"}/
+  -#               %ol.carousel-indicators
+  -#                 %li.active{"data-slide-to" => "0", "data-target" => "#project-thumbnail-carousel-1"}
+  -#                 %li{"data-slide-to" => "1", "data-target" => "#project-thumbnail-carousel-1"}
+  -#                 %li{"data-slide-to" => "2", "data-target" => "#project-thumbnail-carousel-1"}
+  -#               %a.left.carousel-control{"data-slide" => "prev", :href => "#project-thumbnail-carousel-1"}
+  -#                 %span.fa.fa-chevron-left
+  -#               %a.right.carousel-control{"data-slide" => "next", :href => "#project-thumbnail-carousel-1"}
+  -#                 %span.fa.fa-chevron-right
+  -#           .row
+  -#             .col-md-4
+  -#               %button.btn.btn-block.btn-primary{:type => "button"} Launch Project
+  -#               %ul.list-unstyled.project-info
+  -#                 %li
+  -#                   %strong Type
+  -#                   %span.pull-right Web Design
+  -#                 %li
+  -#                   %strong Client
+  -#                   %span.pull-right Google
+  -#                 %li
+  -#                   %strong Year
+  -#                   %span.pull-right 2014
+  -#             .col-md-8
+  -#               %p Suspendisse varius nisl nunc. Aenean in dictum nibh. Nullam congue facilisis purus porta ullamcorper. Aenean in consequat sapien. Cras orci augue, ultricies at luctus congue, dapibus sed magna. Vivamus consequat commodo pharetra. Maecenas sed tincidunt mi, quis accumsan nisi. Praesent ac porttitor massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur in bibendum tellus, vitae imperdiet mauris.
   %section#testimonials.section.section-center.section-hilite.section-testimonial
     .container
       %h2.section-title
@@ -180,29 +166,29 @@
         .carousel-inner
           .item.active
             %blockquote
-              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+              %p I love the new types of pens and erasers I get to try out
               %small
-                Someone famous in
-                %cite{:title => "Source Title"} Source Title
+                Mark Mulholland
+                %cite{:title => "Source Title"}
           .item
             %blockquote
-              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+              %p So happy to never have to think about whiteboard supplies again
               %small
-                Someone famous in
-                %cite{:title => "Source Title"} Source Title
+                Jack Burly
+                %cite{:title => "Source Title"} - Captivate Real Estate
           .item
             %blockquote
-              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+              %p You've made whiteboards fun again
               %small
-                Someone famous in
-                %cite{:title => "Source Title"} Source Title
+                Some guy
+                %cite{:title => "Source Title"} working at a startup
         %ol.carousel-indicators
           %li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
-            %img.img-circle{:alt => "", :height => "64", :src => "http://placehold.it/64x64", :width => "64"}/
+            %img.img-circle{:alt => "", :height => "64", :src => "assets/landing_page/mark.jpg", :width => "64"}/
           %li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
-            %img.img-circle{:alt => "", :height => "64", :src => "http://placehold.it/64x64", :width => "64"}/
+            %img.img-circle{:alt => "", :height => "64", :src => "assets/landing_page/jack.jpg", :width => "64"}/
           %li{"data-slide-to" => "2", "data-target" => "#carousel-example-generic"}
-            %img.img-circle{:alt => "", :height => "64", :src => "http://placehold.it/64x64", :width => "64"}/
+            %img.img-circle{:alt => "", :height => "64", :src => "assets/landing_page/david.jpg", :width => "64"}/
   %section#pricing.section.section-center.section-pricing
     .container
       %h2.section-title
@@ -212,7 +198,7 @@
           .col-md-3.col-sm-6
             .panel.panel-default
               %header.panel-heading
-                %h1 Bronze
+                %h1.pricing-header Two Guys In A Garage
                 .the-price
                   $5
                   %span.subscript / month
@@ -220,23 +206,18 @@
                 %table.table
                   %tbody
                     %tr
-                      %td 1 Account
+                      %td 2 Markers
                     %tr.active
-                      %td 1 Project
+                      %td 1 Eraser
                     %tr
-                      %td 50K API Access
-                    %tr.active
-                      %td 50MB Storage
-                    %tr
-                      %td Custom Cloud Services
-                    %tr.active
-                      %td Weekly Reports
+                      %td 1 Accessory
+
               %footer.panel-footer
                 %a.btn.btn-default{:href => "#"} Sign up now
           .col-md-3.col-sm-6
             .panel.panel-default
               %header.panel-heading
-                %h1 Silver
+                %h1.pricing-header Seed Money
                 .the-price
                   $10
                   %span.subscript / month
@@ -244,23 +225,18 @@
                 %table.table
                   %tbody
                     %tr
-                      %td 1 Account
+                      %td 4 Markers
                     %tr.active
-                      %td 3 Project
+                      %td 2 Erasers
                     %tr
-                      %td 100K API Access
-                    %tr.active
-                      %td 100MB Storage
-                    %tr
-                      %td Custom Cloud Services
-                    %tr.active
-                      %td Weekly Reports
+                      %td 2 Accessories
+
               %footer.panel-footer
                 %a.btn.btn-default{:href => "#"} Sign up now
           .col-md-3.col-sm-6
             .panel.panel-primary
               %header.panel-heading
-                %h1 Gold
+                %h1.pricing-header Venture Capital
                 .the-price
                   $20
                   %span.subscript / month
@@ -268,41 +244,34 @@
                 %table.table
                   %tbody
                     %tr
-                      %td 2 Account
+                      %td 8 Markers
                     %tr.active
-                      %td 5 Project
+                      %td 4 Erasers
                     %tr
-                      %td 100K API Access
+                      %td 4 Accessories
                     %tr.active
-                      %td 200MB Storage
-                    %tr
-                      %td Custom Cloud Services
-                    %tr.active
-                      %td Weekly Reports
+                      %td 1 Suprise
+
               %footer.panel-footer
                 %a.btn.btn-primary{:href => "#"} Sign up now
           .col-md-3.col-sm-6
             .panel.panel-default
               %header.panel-heading
-                %h1 Diamond
+                %h1.pricing-header IPO
                 .the-price
-                  $35
+                  $50
                   %span.subscript / month
               .panel-body
                 %table.table
                   %tbody
                     %tr
-                      %td 5 Account
+                      %td 20 Markers
                     %tr.active
-                      %td 20 Project
+                      %td 10 Erasers
                     %tr
-                      %td 300K API Access
+                      %td 10 Accessories
                     %tr.active
-                      %td 500MB Storage
-                    %tr
-                      %td Custom Cloud Services
-                    %tr.active
-                      %td Weekly Reports
+                      %td 3 Suprises
               %footer.panel-footer
                 %a.btn.btn-default{:href => "#"} Sign up now
   %section#team.section.section-center.section-hilite.section-team

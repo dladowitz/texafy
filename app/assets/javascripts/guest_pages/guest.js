@@ -11,4 +11,11 @@
 // There are a number of JS files in this folder from the start bootstrap template.
 // Probably not being used right now but needed for full template functionaily
 
+//= require jquery
+//= require bootstrap-sprockets
+//= require jquery_ujs
+//= require turbolinks
+//= require guest_pages/bootstrap-3.1.1.min
 //= require_tree .
+
+console.log("Guest.js working")
