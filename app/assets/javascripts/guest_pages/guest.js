@@ -15,7 +15,6 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
-//= require guest_pages/bootstrap-3.1.1.min
 //= require_tree .
 
 console.log("Guest.js working")
