@@ -21,9 +21,9 @@
       %p Its pretty simple. You're company goes through whiteboard markers every month. We make sure you always have enough on hand. Oh and we find some really fun ones to keep your team excited.
       .main-action.row
         .col-md-3.col-md-offset-3.col-sm-4.col-sm-offset-2
-          %a.smooth-scroll.btn.btn-lg.btn-block.btn-danger{:href => "#contact"} Sign Up
+          %a.smooth-scroll.btn.btn-lg.btn-block.btn-danger{:href => "/signup"} Sign Up
         .col-md-3.col-sm-4
-          %a.smooth-scroll.btn.btn-lg.btn-block.btn-default{:href => "#portfolio"} Contact Us
+          %a.smooth-scroll.btn.btn-lg.btn-block.btn-default{:href => "#contact"} Contact Us
   %section#features.section.section-center.section-hilite.section-features
     .container
       %h2.section-title
@@ -45,118 +45,118 @@
           %h4 Try Out New Supplies
           %p Get Currated Batches of Whiteboard Markers and Accessories (Yes, we said currated whiteboard markers)
 
-  %section#portfolio.section.section-portfolio
-    .container
-      %h2.section-title
-        %span Recent Works.
-      %ul#filters
-        %li
-          %a{"data-filter" => "*", :href => "#"} All
-        %li /
-        %li
-          %a{"data-filter" => ".web", :href => "#"} Web Design
-        %li /
-        %li
-          %a{"data-filter" => ".graphic", :href => "#"} Graphic Design
-        %li /
-        %li
-          %a{"data-filter" => ".photography", :href => "#"} Photography
-        %li /
-        %li
-          %a{"data-filter" => ".motion", :href => "#"} Motion Graphics
-        %li /
-        %li
-          %a{"data-filter" => ".branding", :href => "#"} Branding
-      .portfolio-isotope.row
-        %article.post.col-md-3.col-sm-6.portfolio-item.branding.photography.web
-          .entry-thumbnail
-            %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
-              %img{:alt => "", :src => "http://placehold.it/400x300"}/
-              %span.overlay
-                %i.fa.fa-plus
-        %article.post.col-md-3.col-sm-6.portfolio-item.motion.graphic
-          .entry-thumbnail
-            %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
-              %img{:alt => "", :src => "http://placehold.it/400x300"}/
-              %span.overlay
-                %i.fa.fa-plus
-        %article.post.col-md-3.col-sm-6.portfolio-item.branding.web
-          .entry-thumbnail
-            %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
-              %img{:alt => "", :src => "http://placehold.it/400x300"}/
-              %span.overlay
-                %i.fa.fa-plus
-        %article.post.col-md-3.col-sm-6.portfolio-item.photography.graphic
-          .entry-thumbnail
-            %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
-              %img{:alt => "", :src => "http://placehold.it/400x300"}/
-              %span.overlay
-                %i.fa.fa-plus
-        %article.post.col-md-3.col-sm-6.portfolio-item.motion.web
-          .entry-thumbnail
-            %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
-              %img{:alt => "", :src => "http://placehold.it/400x300"}/
-              %span.overlay
-                %i.fa.fa-plus
-        %article.post.col-md-3.col-sm-6.portfolio-item.branding.graphic
-          .entry-thumbnail
-            %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
-              %img{:alt => "", :src => "http://placehold.it/400x300"}/
-              %span.overlay
-                %i.fa.fa-plus
-        %article.post.col-md-3.col-sm-6.portfolio-item.motion.photography.web
-          .entry-thumbnail
-            %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
-              %img{:alt => "", :src => "http://placehold.it/400x300"}/
-              %span.overlay
-                %i.fa.fa-plus
-        %article.post.col-md-3.col-sm-6.portfolio-item.photography.motion.branding.graphic
-          .entry-thumbnail
-            %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
-              %img{:alt => "", :src => "http://placehold.it/400x300"}/
-              %span.overlay
-                %i.fa.fa-plus
-  / Project Modal
-  #project-modal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "project-modal-label", :role => "dialog", :tabindex => "-1"}
-    .modal-dialog
-      .modal-content
-        .modal-header
-          %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
-          %h4#project-modal-label.modal-title Project title
-        .modal-body
-          %article.single-project
-            .project-thumbnail
-              #project-thumbnail-carousel-1.carousel.slide{"data-ride" => "carousel"}
-                .carousel-inner
-                  .item.active
-                    %img{:src => "http://placehold.it/800x600"}/
-                  .item
-                    %img{:src => "http://placehold.it/800x600"}/
-                  .item
-                    %img{:src => "http://placehold.it/800x600"}/
-                %ol.carousel-indicators
-                  %li.active{"data-slide-to" => "0", "data-target" => "#project-thumbnail-carousel-1"}
-                  %li{"data-slide-to" => "1", "data-target" => "#project-thumbnail-carousel-1"}
-                  %li{"data-slide-to" => "2", "data-target" => "#project-thumbnail-carousel-1"}
-                %a.left.carousel-control{"data-slide" => "prev", :href => "#project-thumbnail-carousel-1"}
-                  %span.fa.fa-chevron-left
-                %a.right.carousel-control{"data-slide" => "next", :href => "#project-thumbnail-carousel-1"}
-                  %span.fa.fa-chevron-right
-            .row
-              .col-md-4
-                %button.btn.btn-block.btn-primary{:type => "button"} Launch Project
-                %ul.list-unstyled.project-info
-                  %li
-                    %strong Type
-                    %span.pull-right Web Design
-                  %li
-                    %strong Client
-                    %span.pull-right Google
-                  %li
-                    %strong Year
-                    %span.pull-right 2014
-              .col-md-8
-                %p Suspendisse varius nisl nunc. Aenean in dictum nibh. Nullam congue facilisis purus porta ullamcorper. Aenean in consequat sapien. Cras orci augue, ultricies at luctus congue, dapibus sed magna. Vivamus consequat commodo pharetra. Maecenas sed tincidunt mi, quis accumsan nisi. Praesent ac porttitor massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur in bibendum tellus, vitae imperdiet mauris.
+  -# %section#portfolio.section.section-portfolio
+  -#   .container
+  -#     %h2.section-title
+  -#       %span Recent Works.
+  -#     %ul#filters
+  -#       %li
+  -#         %a{"data-filter" => "*", :href => "#"} All
+  -#       %li /
+  -#       %li
+  -#         %a{"data-filter" => ".web", :href => "#"} Web Design
+  -#       %li /
+  -#       %li
+  -#         %a{"data-filter" => ".graphic", :href => "#"} Graphic Design
+  -#       %li /
+  -#       %li
+  -#         %a{"data-filter" => ".photography", :href => "#"} Photography
+  -#       %li /
+  -#       %li
+  -#         %a{"data-filter" => ".motion", :href => "#"} Motion Graphics
+  -#       %li /
+  -#       %li
+  -#         %a{"data-filter" => ".branding", :href => "#"} Branding
+  -#     .portfolio-isotope.row
+  -#       %article.post.col-md-3.col-sm-6.portfolio-item.branding.photography.web
+  -#         .entry-thumbnail
+  -#           %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
+  -#             %img{:alt => "", :src => "http://placehold.it/400x300"}/
+  -#             %span.overlay
+  -#               %i.fa.fa-plus
+  -#       %article.post.col-md-3.col-sm-6.portfolio-item.motion.graphic
+  -#         .entry-thumbnail
+  -#           %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
+  -#             %img{:alt => "", :src => "http://placehold.it/400x300"}/
+  -#             %span.overlay
+  -#               %i.fa.fa-plus
+  -#       %article.post.col-md-3.col-sm-6.portfolio-item.branding.web
+  -#         .entry-thumbnail
+  -#           %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
+  -#             %img{:alt => "", :src => "http://placehold.it/400x300"}/
+  -#             %span.overlay
+  -#               %i.fa.fa-plus
+  -#       %article.post.col-md-3.col-sm-6.portfolio-item.photography.graphic
+  -#         .entry-thumbnail
+  -#           %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
+  -#             %img{:alt => "", :src => "http://placehold.it/400x300"}/
+  -#             %span.overlay
+  -#               %i.fa.fa-plus
+  -#       %article.post.col-md-3.col-sm-6.portfolio-item.motion.web
+  -#         .entry-thumbnail
+  -#           %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
+  -#             %img{:alt => "", :src => "http://placehold.it/400x300"}/
+  -#             %span.overlay
+  -#               %i.fa.fa-plus
+  -#       %article.post.col-md-3.col-sm-6.portfolio-item.branding.graphic
+  -#         .entry-thumbnail
+  -#           %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
+  -#             %img{:alt => "", :src => "http://placehold.it/400x300"}/
+  -#             %span.overlay
+  -#               %i.fa.fa-plus
+  -#       %article.post.col-md-3.col-sm-6.portfolio-item.motion.photography.web
+  -#         .entry-thumbnail
+  -#           %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
+  -#             %img{:alt => "", :src => "http://placehold.it/400x300"}/
+  -#             %span.overlay
+  -#               %i.fa.fa-plus
+  -#       %article.post.col-md-3.col-sm-6.portfolio-item.photography.motion.branding.graphic
+  -#         .entry-thumbnail
+  -#           %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
+  -#             %img{:alt => "", :src => "http://placehold.it/400x300"}/
+  -#             %span.overlay
+  -#               %i.fa.fa-plus
+  -# / Project Modal
+  -# #project-modal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "project-modal-label", :role => "dialog", :tabindex => "-1"}
+  -#   .modal-dialog
+  -#     .modal-content
+  -#       .modal-header
+  -#         %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+  -#         %h4#project-modal-label.modal-title Project title
+  -#       .modal-body
+  -#         %article.single-project
+  -#           .project-thumbnail
+  -#             #project-thumbnail-carousel-1.carousel.slide{"data-ride" => "carousel"}
+  -#               .carousel-inner
+  -#                 .item.active
+  -#                   %img{:src => "http://placehold.it/800x600"}/
+  -#                 .item
+  -#                   %img{:src => "http://placehold.it/800x600"}/
+  -#                 .item
+  -#                   %img{:src => "http://placehold.it/800x600"}/
+  -#               %ol.carousel-indicators
+  -#                 %li.active{"data-slide-to" => "0", "data-target" => "#project-thumbnail-carousel-1"}
+  -#                 %li{"data-slide-to" => "1", "data-target" => "#project-thumbnail-carousel-1"}
+  -#                 %li{"data-slide-to" => "2", "data-target" => "#project-thumbnail-carousel-1"}
+  -#               %a.left.carousel-control{"data-slide" => "prev", :href => "#project-thumbnail-carousel-1"}
+  -#                 %span.fa.fa-chevron-left
+  -#               %a.right.carousel-control{"data-slide" => "next", :href => "#project-thumbnail-carousel-1"}
+  -#                 %span.fa.fa-chevron-right
+  -#           .row
+  -#             .col-md-4
+  -#               %button.btn.btn-block.btn-primary{:type => "button"} Launch Project
+  -#               %ul.list-unstyled.project-info
+  -#                 %li
+  -#                   %strong Type
+  -#                   %span.pull-right Web Design
+  -#                 %li
+  -#                   %strong Client
+  -#                   %span.pull-right Google
+  -#                 %li
+  -#                   %strong Year
+  -#                   %span.pull-right 2014
+  -#             .col-md-8
+  -#               %p Suspendisse varius nisl nunc. Aenean in dictum nibh. Nullam congue facilisis purus porta ullamcorper. Aenean in consequat sapien. Cras orci augue, ultricies at luctus congue, dapibus sed magna. Vivamus consequat commodo pharetra. Maecenas sed tincidunt mi, quis accumsan nisi. Praesent ac porttitor massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur in bibendum tellus, vitae imperdiet mauris.
 
   %section#portfolio.section.section-portfolio
     .container
@@ -165,95 +165,160 @@
       %p
         Remember the first time you used a whiteboard. It was actually fun. Let's bring back the creative spirit. Here is a collection of amazing work done by folks out in the wild. Send us photos of your work.
       .portfolio-isotope.row
+        %article.post.col-md-3.col-sm-6.portfolio-item
+          .entry-thumbnail
+            %a.hover-effect{"data-target" => "#yoda-modal", "data-toggle" => "modal", :href => "#"}
+              %img{:alt => "", :src => "assets/landing_page/yoda.jpg"}/
+              %span.overlay
+                %i.fa.fa-plus
         %article.post.col-md-3.col-sm-6.portfolio-item.branding.photography.web
           .entry-thumbnail
-            %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
-              %img{:alt => "", :src => "assets/landing_page/link.jpg"}/
+            %a.hover-effect{"data-target" => "#catwoman-modal", "data-toggle" => "modal", :href => "#"}
+              %img{:alt => "", :src => "assets/landing_page/catwoman.jpg"}/
               %span.overlay
                 %i.fa.fa-plus
         %article.post.col-md-3.col-sm-6.portfolio-item.motion.graphic
           .entry-thumbnail
-            %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
+            %a.hover-effect{"data-target" => "#harry-modal", "data-toggle" => "modal", :href => "#"}
               %img{:alt => "", :src => "assets/landing_page/harry.jpg"}/
               %span.overlay
                 %i.fa.fa-plus
         %article.post.col-md-3.col-sm-6.portfolio-item.branding.web
           .entry-thumbnail
-            %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
+            %a.hover-effect{"data-target" => "#hallowen-modal", "data-toggle" => "modal", :href => "#"}
               %img{:alt => "", :src => "assets/landing_page/halloween.jpg"}/
               %span.overlay
                 %i.fa.fa-plus
         %article.post.col-md-3.col-sm-6.portfolio-item.photography.graphic
           .entry-thumbnail
-            %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
-              %img{:alt => "", :src => "assets/landing_page/gollum.jpg"}/
+            %a.hover-effect{"data-target" => "#nemo-modal", "data-toggle" => "modal", :href => "#"}
+              %img{:alt => "", :src => "assets/landing_page/nemo.jpg"}/
               %span.overlay
                 %i.fa.fa-plus
         %article.post.col-md-3.col-sm-6.portfolio-item.motion.web
           .entry-thumbnail
-            %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
+            %a.hover-effect{"data-target" => "#scarface-modal", "data-toggle" => "modal", :href => "#"}
               %img{:alt => "", :src => "assets/landing_page/scarface.jpg"}/
               %span.overlay
                 %i.fa.fa-plus
         %article.post.col-md-3.col-sm-6.portfolio-item.branding.graphic
           .entry-thumbnail
-            %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
-              %img{:alt => "", :src => "assets/landing_page/tick.jpg"}/
+            %a.hover-effect{"data-target" => "#guardians-modal", "data-toggle" => "modal", :href => "#"}
+              %img{:alt => "", :src => "assets/landing_page/guardians.jpg"}/
               %span.overlay
                 %i.fa.fa-plus
-        %article.post.col-md-3.col-sm-6.portfolio-item.motion.photography.web
-          .entry-thumbnail
-            %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
-              %img{:alt => "", :src => "assets/landing_page/dragon-lair.jpg"}/
-              %span.overlay
-                %i.fa.fa-plus
+
         %article.post.col-md-3.col-sm-6.portfolio-item.photography.motion.branding.graphic
           .entry-thumbnail
-            %a.hover-effect{"data-target" => "#project-modal", "data-toggle" => "modal", :href => "#"}
-              %img{:alt => "", :src => "assets/landing_page/rowing.jpg"}/
+            %a.hover-effect{"data-target" => "#stapler-modal", "data-toggle" => "modal", :href => "#"}
+              %img{:alt => "", :src => "assets/landing_page/stapler.jpg"}/
               %span.overlay
                 %i.fa.fa-plus
   / Project Modal
-  #project-modal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "project-modal-label", :role => "dialog", :tabindex => "-1"}
+  #yoda-modal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "project-modal-label", :role => "dialog", :tabindex => "-1"}
     .modal-dialog
       .modal-content
         .modal-header
           %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
-          %h4#project-modal-label.modal-title Project title
+          %h4#project-modal-label.modal-title The Force is Strong with You
         .modal-body
           %article.single-project
             .project-thumbnail
               #project-thumbnail-carousel-1.carousel.slide{"data-ride" => "carousel"}
                 .carousel-inner
                   .item.active
-                    %img{:src => "http://placehold.it/800x600"}/
-                  .item
-                    %img{:src => "http://placehold.it/800x600"}/
-                  .item
-                    %img{:src => "http://placehold.it/800x600"}/
-                %ol.carousel-indicators
-                  %li.active{"data-slide-to" => "0", "data-target" => "#project-thumbnail-carousel-1"}
-                  %li{"data-slide-to" => "1", "data-target" => "#project-thumbnail-carousel-1"}
-                  %li{"data-slide-to" => "2", "data-target" => "#project-thumbnail-carousel-1"}
-                %a.left.carousel-control{"data-slide" => "prev", :href => "#project-thumbnail-carousel-1"}
-                  %span.fa.fa-chevron-left
-                %a.right.carousel-control{"data-slide" => "next", :href => "#project-thumbnail-carousel-1"}
-                  %span.fa.fa-chevron-right
-            .row
-              .col-md-4
-                %button.btn.btn-block.btn-primary{:type => "button"} Launch Project
-                %ul.list-unstyled.project-info
-                  %li
-                    %strong Type
-                    %span.pull-right Web Design
-                  %li
-                    %strong Client
-                    %span.pull-right Google
-                  %li
-                    %strong Year
-                    %span.pull-right 2014
-              .col-md-8
-                %p Suspendisse varius nisl nunc. Aenean in dictum nibh. Nullam congue facilisis purus porta ullamcorper. Aenean in consequat sapien. Cras orci augue, ultricies at luctus congue, dapibus sed magna. Vivamus consequat commodo pharetra. Maecenas sed tincidunt mi, quis accumsan nisi. Praesent ac porttitor massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur in bibendum tellus, vitae imperdiet mauris.
+                    %img{:src => "assets/landing_page/yoda.jpg"}/
+  #catwoman-modal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "project-modal-label", :role => "dialog", :tabindex => "-1"}
+    .modal-dialog
+      .modal-content
+        .modal-header
+          %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+          %h4#project-modal-label.modal-title Crazy Catwoman
+        .modal-body
+          %article.single-project
+            .project-thumbnail
+              #project-thumbnail-carousel-1.carousel.slide{"data-ride" => "carousel"}
+                .carousel-inner
+                  .item.active
+                    %img{:src => "assets/landing_page/catwoman.jpg"}/
+  #harry-modal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "project-modal-label", :role => "dialog", :tabindex => "-1"}
+    .modal-dialog
+      .modal-content
+        .modal-header
+          %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+          %h4#project-modal-label.modal-title Wizarding
+        .modal-body
+          %article.single-project
+            .project-thumbnail
+              #project-thumbnail-carousel-1.carousel.slide{"data-ride" => "carousel"}
+                .carousel-inner
+                  .item.active
+                    %img{:src => "assets/landing_page/harry.jpg"}/
+  #halloween-modal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "project-modal-label", :role => "dialog", :tabindex => "-1"}
+    .modal-dialog
+      .modal-content
+        .modal-header
+          %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+          %h4#project-modal-label.modal-title Halloween Town
+        .modal-body
+          %article.single-project
+            .project-thumbnail
+              #project-thumbnail-carousel-1.carousel.slide{"data-ride" => "carousel"}
+                .carousel-inner
+                  .item.active
+                    %img{:src => "assets/landing_page/halloween.jpg"}/
+  #nemo-modal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "project-modal-label", :role => "dialog", :tabindex => "-1"}
+    .modal-dialog
+      .modal-content
+        .modal-header
+          %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+          %h4#project-modal-label.modal-title Employees Are Not Food
+        .modal-body
+          %article.single-project
+            .project-thumbnail
+              #project-thumbnail-carousel-1.carousel.slide{"data-ride" => "carousel"}
+                .carousel-inner
+                  .item.active
+                    %img{:src => "assets/landing_page/nemo.jpg"}/
+  #scarface-modal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "project-modal-label", :role => "dialog", :tabindex => "-1"}
+    .modal-dialog
+      .modal-content
+        .modal-header
+          %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+          %h4#project-modal-label.modal-title Scarface
+        .modal-body
+          %article.single-project
+            .project-thumbnail
+              #project-thumbnail-carousel-1.carousel.slide{"data-ride" => "carousel"}
+                .carousel-inner
+                  .item.active
+                    %img{:src => "assets/landing_page/scarface.jpg"}/
+  #guardians-modal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "project-modal-label", :role => "dialog", :tabindex => "-1"}
+    .modal-dialog
+      .modal-content
+        .modal-header
+          %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+          %h4#project-modal-label.modal-title I Am Groot
+        .modal-body
+          %article.single-project
+            .project-thumbnail
+              #project-thumbnail-carousel-1.carousel.slide{"data-ride" => "carousel"}
+                .carousel-inner
+                  .item.active
+                    %img{:src => "assets/landing_page/guardians.jpg"}/
+  #stapler-modal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "project-modal-label", :role => "dialog", :tabindex => "-1"}
+    .modal-dialog
+      .modal-content
+        .modal-header
+          %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+          %h4#project-modal-label.modal-title Excuse Me....
+        .modal-body
+          %article.single-project
+            .project-thumbnail
+              #project-thumbnail-carousel-1.carousel.slide{"data-ride" => "carousel"}
+                .carousel-inner
+                  .item.active
+                    %img{:src => "assets/landing_page/stapler.jpg"}/
   %section#testimonials.section.section-center.section-hilite.section-testimonial
     .container
       %h2.section-title
@@ -308,9 +373,9 @@
                       %td 1 Eraser
                     %tr
                       %td 1 Accessory
-
               %footer.panel-footer
-                %a.btn.btn-default{:href => "#"} Sign up now
+                %a.btn.btn-default{:href => "/signup"} Sign up now
+
           .col-md-3.col-sm-6
             .panel.panel-default
               %header.panel-heading
@@ -327,9 +392,9 @@
                       %td 2 Erasers
                     %tr
                       %td 2 Accessories
-
               %footer.panel-footer
-                %a.btn.btn-default{:href => "#"} Sign up now
+                %a.btn.btn-default{:href => "/signup"} Sign up now
+
           .col-md-3.col-sm-6
             .panel.panel-primary
               %header.panel-heading
@@ -348,9 +413,9 @@
                       %td 4 Accessories
                     %tr.active
                       %td 1 Suprise
-
               %footer.panel-footer
-                %a.btn.btn-primary{:href => "#"} Sign up now
+                %a.btn.btn-primary{:href => "/signup"} Sign up now
+
           .col-md-3.col-sm-6
             .panel.panel-default
               %header.panel-heading
@@ -370,7 +435,7 @@
                     %tr.active
                       %td 3 Suprises
               %footer.panel-footer
-                %a.btn.btn-default{:href => "#"} Sign up now
+                %a.btn.btn-default{:href => "/signup"} Sign up now
   -# %section#team.section.section-center.section-hilite.section-team
   -#   .container
   -#     %h2.section-title
