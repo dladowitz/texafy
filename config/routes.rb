@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get    :request_password,        to: "password_resets#request_password", as: :request_password
   get    "/reset_password/:token", to: "password_resets#reset_password",   as: :reset_password
   patch  "/reset_password/:token", to: "password_resets#update",           as: :password_reset
+  get    "/contact",               to: "support#contact_us_email",         as: :contact_us           
 
 
   # resource routes
