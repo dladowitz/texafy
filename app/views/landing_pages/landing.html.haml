@@ -534,22 +534,22 @@
         %span Contact Us
       %p Want to say hello? Want to know more about us? Give us a call or drop us an email.
       .main-action
-        %form{:role => "form"}
+        = form_tag(contact_us_path, :role => "form") do
           .row
             .col-sm-6
               .form-group
                 %label.sr-only Subject
-                %input.form-control{:placeholder => "Subject", :type => "text"}/
+                = text_field_tag "subject", nil, placeholder: "Subject", class: "form-control"
               .form-group
                 %label.sr-only Name
-                %input.form-control{:placeholder => "Name", :type => "text"}/
+                = text_field_tag "name", nil, placeholder: "Name", class: "form-control"
               .form-group
                 %label.sr-only Email
-                %input.form-control{:placeholder => "Email", :type => "email"}/
+                = email_field_tag "email", nil, placeholder: "Email", class: "form-control"
             .col-sm-6
               .form-group
                 %label.sr-only Message
-                %textarea.form-control{:placeholder => "Message", :rows => "6", :style => "height: 100px"}
+                = text_area_tag "message", nil, placeholder: "Message", class: "form-control", :rows => "6", :style => "height: 100px"
           %button.btn.btn-default{:type => "submit"} Send message
 
   %section.section.section-center.section-cta.pt10.pb20

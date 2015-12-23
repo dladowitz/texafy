@@ -1,0 +1,29 @@
+.container
+  -# = image_tag attachments["logo_handwriting.png"].url, style: "width: 700px; margin-left: 25%;"
+
+  -#Css classes are not being loaded. Premailer gem is supposed to handle
+  .col-md-8.col-md-offset-2.mt50
+    .panel.panel-success
+      .panel-heading{style: "background-color: yellowgreen !important"}
+        .panel-title
+          %h2.text-center Someone needs help with MARKAFY!
+      .panel-body
+        %h2 Lets Get Back To Them Quick Style.
+        %h3.text-center Here is there info:
+
+        %table.table.table-striped
+          %tr
+            %th Name
+            %td= @options[:name]
+          %tr
+            %th Email
+            %td= @options[:email]
+          %tr
+            %th Subect
+            %td= @options[:subject]
+
+        %p= @options[:message]
+
+      .panel-footer
+        %h5
+        = link_to "Markafy", "https://markafy.heroku.com", class: "blue underline text-center"

@@ -6,4 +6,6 @@
         -# = render "layouts/validation_errors", :model => @user
 
       .col-xs-8.col-xs-offset-2
-        %h2 Thanks, our robots are alerting a real person.
+        %h2= "Thanks #{@options[:name]}, our robots are alerting a real person."
+
+        %h3= "We'll get back to you at #{@options[:email]}!"
