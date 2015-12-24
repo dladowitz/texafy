@@ -23,9 +23,18 @@ class SubscriptionsController < ApplicationController
   end
 
   def edit
+    @subscription = @user.subscription
   end
 
   def destroy
+    @subscription = @user.subscription
+
+    customer = Stripe::Customer.retrieve(@user.stripe_id)
+    stripe_subscription_id = customer.subscriptions.first.id
+    customer.subscriptions.retrieve(stripe_subscription_id).delete(:at_period_end => true)
+
+    @subscription.update_attributes(level: 0)
+    redirect_to @user
   end
 
   private

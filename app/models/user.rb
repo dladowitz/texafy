@@ -10,7 +10,7 @@
 #  admin           :boolean
 #  created_at      :datetime
 #  updated_at      :datetime
-#  stripe_id       :integer
+#  stripe_id       :string
 #
 
 class User < ActiveRecord::Base

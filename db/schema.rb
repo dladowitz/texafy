@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 20151224055717) do
     t.boolean  "admin"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "stripe_id"
+    t.string   "stripe_id"
   end
 
 end

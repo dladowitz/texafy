@@ -6,9 +6,14 @@
           Here is all your relevant info
       .ibox-content
         .row
-          %p
-            %strong Current Subscription:
-            - if @user.subscription
+          %h2.col-sm-10
+            %strong Subscription:
+            - if !@user.subscription || @user.subscription.level == 0
+              None
+              %p.mt20
+                = link_to "Add Subscription", new_user_subscription_path(@user), class: 'btn btn-primary'
+
+            - else @user.subscription
               - case @user.subscription.level
               - when 101
                 Two Guys in a Garage - $5.50/mo
@@ -21,27 +26,49 @@
               - else
                 = @user.subscription.level
 
-              %p
-                = link_to "Change Subscription", edit_user_subscription_path(@user, @user.subscription), class: 'btn btn-primary btn-sm'
+              %p.mt20
+                = link_to "Cancel Subscription", edit_user_subscription_path(@user, @user.subscription), class: 'btn btn-primary'
 
-            - else
-              None
-              %p
-                = link_to "Add Subscription", new_user_subscription_path(@user), class: 'btn btn-primary'
+        %hr
+        .row
+          %h2.col-sm-10
+            %strong Account:
+            %p.mt20
+              = link_to "Update Account", edit_user_path(@user), class: "btn btn-info"
 
+        %hr
         .row.mt100
-          = link_to "Update Account", edit_user_path(@user), class: "btn btn-primary ml10"
+          .text-center
+            %button.btn.btn-warning.dim#cat-button{:type => "button", :onclick => "toggleCats()"} Show Me Some Cats
+          #cats{style: "display: none"}
+            .posts.m-t-lg
+              .no-posts.m-l-lg
+                = image_tag "http://www.eonline.com/eol_images/Entire_Site/201478/rs_500x281-140808102730-cutest-cat-gifs-please.gif",
+                  class: "col-sm-6 mt30"
 
-          .posts.m-t-lg
-            .no-posts.m-l-lg
-              = image_tag "http://www.eonline.com/eol_images/Entire_Site/201478/rs_500x281-140808102730-cutest-cat-gifs-please.gif",
-                class: "col-sm-6 mt30"
+                = image_tag "http://31.media.tumblr.com/323247f4fdf2cc14831bb7980bb432af/tumblr_njy5ihohLL1re3kvuo1_400.gif",
+                  class: "col-sm-6 mt30"
 
-              = image_tag "http://31.media.tumblr.com/323247f4fdf2cc14831bb7980bb432af/tumblr_njy5ihohLL1re3kvuo1_400.gif",
-                class: "col-sm-6 mt30"
+                = image_tag "http://viralgifs.com/wp-content/uploads/2014/03/cat_did_u_forget.gif?fb43fe",
+                  class: "col-sm-6 mt30"
 
-              = image_tag "http://viralgifs.com/wp-content/uploads/2014/03/cat_did_u_forget.gif?fb43fe",
-                class: "col-sm-6 mt30"
+                = image_tag "http://www.myhappyoffice.com/wp-content/uploads/2012/03/cute-happy-funny-giggle-cat-5.gif",
+                  class: "col-sm-6 mt30"
 
-              = image_tag "http://www.myhappyoffice.com/wp-content/uploads/2012/03/cute-happy-funny-giggle-cat-5.gif",
-                class: "col-sm-6 mt30"
+
+:javascript
+  var cats = "hidden";
+  function toggleCats(){
+    console.log("Firing toggleCats");
+
+    if(cats === "hidden"){
+      document.getElementById('cats').style.display = "block";
+      document.getElementById('cat-button').innerHTML = "Hide Me Some Cats"
+      cats = "shown";
+    }else{
+      document.getElementById('cats').style.display = "none";
+      cats = "hidden";
+      document.getElementById('cat-button').innerHTML = "Show Me Some Those Cats Again"
+    }
+
+  }
