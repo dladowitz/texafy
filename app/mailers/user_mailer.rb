@@ -18,7 +18,7 @@ class UserMailer < ApplicationMailer
     mail(to: @user.email, subject: "Markafy - Signup")
   end
 
-  def alert_signup_email(user)
+  def signup_alert_email(user)
     @user = user
 
     mail(to: ["david@tradecrafted.com", "marshall@tradecrafted.com"], subject: "Markafy - Signup")
