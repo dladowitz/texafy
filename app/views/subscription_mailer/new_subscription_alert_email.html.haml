@@ -1,0 +1,32 @@
+.container
+  -# = image_tag attachments["logo_handwriting.png"].url, style: "width: 700px; margin-left: 25%;"
+
+  -#Css classes are not being loaded. Premailer gem is supposed to handle
+  .col-md-8.col-md-offset-2.mt50
+    .panel.panel-success
+      .panel-heading{style: "background-color: yellowgreen !important"}
+        .panel-title
+          %h2.text-center OMG, OMG, OMG
+      .panel-body
+        %h2 A Real Human just, um, paid us money.
+        %h3.text-center Here is their info:
+
+        %table.table.table-striped
+          %tr
+            %th Name
+            %td= @user.first_name
+          %tr
+            %th Email
+            %td= @user.email
+          %tr
+            %th Level
+            %td= @subscription.level_in_words
+          %tr
+            %th Price
+            %td= number_to_currency @subscription.price
+
+        %p Quick call Uncle Bezos and get some markers.
+
+      .panel-footer
+        %h5
+        = link_to "Markafy", "https://markafy.heroku.com", class: "blue underline text-center"
