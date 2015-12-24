@@ -7,13 +7,27 @@
       .ibox-content
         .row
           %p
-            %strong Current Subscription
+            %strong Current Subscription:
             - if @user.subscription
-              = @user.subscription.level
+              - case @user.subscription.level
+              - when 101
+                Two Guys in a Garage - $5.50/mo
+              - when 102
+                Seed Money - $11/mo
+              - when 103
+                Venture Capital - $25/mo
+              - when 104
+                IPO - $50/mo
+              - else
+                = @user.subscription.level
+
+              %p
+                = link_to "Change Subscription", edit_user_subscription_path(@user, @user.subscription), class: 'btn btn-primary btn-sm'
+
             - else
               None
-          %p
-            = link_to "Add Subscription", new_user_subscription_path(@user), class: 'btn btn-primary'    
+              %p
+                = link_to "Add Subscription", new_user_subscription_path(@user), class: 'btn btn-primary'
 
         .row.mt100
           = link_to "Update Account", edit_user_path(@user), class: "btn btn-primary ml10"
