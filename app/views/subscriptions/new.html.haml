@@ -6,16 +6,56 @@
     .actions
       -# Not sure how to track this event
       #garage
-        %script.stripe-button{ src: "https://checkout.stripe.com/checkout.js", data: {amount: 550, description: "Two Guys in a Garage", key: ENV["STRIPE_PUBLISHABLE_KEY"]}}
+        .panel.panel-default
+          .panel-body
+            %table.table
+              %tbody
+                %tr
+                  %td 2 Markers
+                %tr.active
+                  %td 1 Eraser
+          %footer.panel-footer
+            %script.stripe-button{ src: "https://checkout.stripe.com/checkout.js", data: {amount: 550, description: "Two Guys in a Garage", key: ENV["STRIPE_PUBLISHABLE_KEY"]}}
 
       #seed{style: "display: none"}
-        %script.stripe-button{src: "https://checkout.stripe.com/checkout.js", data: {amount: 1100, description: "Seed Money", key: ENV["STRIPE_PUBLISHABLE_KEY"]}}
+        .panel.panel-default
+          .panel-body
+            %table.table
+              %tbody
+                %tr
+                  %td 6 Markers
+                %tr.active
+                  %td 1 Eraser
+          %footer.panel-footer
+            %script.stripe-button{src: "https://checkout.stripe.com/checkout.js", data: {amount: 1100, description: "Seed Money", key: ENV["STRIPE_PUBLISHABLE_KEY"]}}
 
       #venture{style: "display: none"}
-        %script.stripe-button{src: "https://checkout.stripe.com/checkout.js", data: {amount: 2500, description: "Venture Capital", key: ENV["STRIPE_PUBLISHABLE_KEY"]}}
+        .panel.panel-default
+          .panel-body
+            %table.table
+              %tbody
+                %tr
+                  %td 10 Markers
+                %tr.active
+                  %td 2 Erasers
+                %tr
+                  %td 1 Suprise Accessory
+          %footer.panel-footer
+            %script.stripe-button{src: "https://checkout.stripe.com/checkout.js", data: {amount: 2500, description: "Venture Capital", key: ENV["STRIPE_PUBLISHABLE_KEY"]}}
 
       #ipo{style: "display: none"}
-        %script.stripe-button{src: "https://checkout.stripe.com/checkout.js", data: {amount: 5000, description: "IPO", key: ENV["STRIPE_PUBLISHABLE_KEY"]}}
+        .panel.panel-default
+          .panel-body
+            %table.table
+              %tbody
+                %tr
+                  %td 25 Markers
+                %tr.active
+                  %td 5 Eraser
+                %tr
+                  %td 3 Suprise Accessories
+          %footer.panel-footer
+            %script.stripe-button{src: "https://checkout.stripe.com/checkout.js", data: {amount: 5000, description: "IPO", key: ENV["STRIPE_PUBLISHABLE_KEY"]}}
 
 :javascript
   console.log("new subscription page javascript working")
@@ -27,7 +67,9 @@
     document.getElementById('venture').style.display = "none";
     document.getElementById('ipo').style.display = "none";
 
-    if(elem.value == 102){
+    if(elem.value == 101){
+      document.getElementById('garage').style.display = "block";
+    } else if(elem.value == 102){
       document.getElementById('seed').style.display = "block";
     } else if(elem.value == 103){
       document.getElementById('venture').style.display = "block";
