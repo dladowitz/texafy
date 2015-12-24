@@ -1,5 +1,5 @@
 .container
-  = image_tag attachments["logo_handwriting.png"].url, style: "width: 700px; margin-left: 25%;"
+  -# = image_tag attachments["logo_handwriting.png"].url, style: "width: 700px; margin-left: 25%;"
 
   -#Css classes are not being loaded. Premailer gem is supposed to handle
   .col-md-8.col-md-offset-2.mt50{style: "width: 50%; margin: 20px auto"}
@@ -8,25 +8,20 @@
         .panel-title
           %h2.text-center Thanks for signing up.
       .panel-body.pr30.pl30
-        %h3.text-center Keep an eye out for updates in the coming weeks.
+        %h3.text-center We are super duper excited about Markers.
         %p
-          Our first tool is available now. It converts water to gasoline
+          If you haven't signed up for a subscription plan aleady now is the time.
+
+        %br
+        %br
+        %br
+        %br
+          
+        %h3 While you're waiting for your markers to arrive check out some cat videos
         %p
-          We are planning on rolling out some more great tools soon.
-
-        %h3 Things you can start doing now
-        %ul
-          %li Thing 1
-          %li Thing 2
-          %li Thing 3
-          %li Thing 4
-
-
-        %h3 Check out some cat videos
-        %p
-          Because the internet runs on
+          Because, you know, the internet runs on
           = link_to "cat videos.", "https://www.youtube.com/watch?v=G4Sn91t1V4g&list=PLRJ3wP0JDyti94Op1oLm4fKZEtC_c36NI", class: "underline blue"
 
       .panel-footer
         %h5
-        = link_to "LaunchIt", "#", class: "blue underline text-center"
+        = link_to "http://www.markafy.com", "http://www.markafy.com", class: "blue underline text-center"

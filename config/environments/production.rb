@@ -72,7 +72,7 @@ Rails.application.configure do
     :host => "markafy.heroku.com"
   }
 
-  # mailgun through heroku add-on
+  # mailgun, not really sure what mailgun account this is using. Maybe some default thing from heroku?
   config.action_mailer.smtp_settings = {
     :port           => ENV['MAILGUN_SMTP_PORT'],
     :address        => ENV['MAILGUN_SMTP_SERVER'],
