@@ -19,6 +19,7 @@ gem 'nokogiri'
 gem 'premailer-rails'
 gem 'sass-rails', '~> 4.0.3'
 gem 'simple_form'
+gem 'stripe'
 gem 'therubyracer', platforms: :ruby
 gem 'thin'
 gem 'validates_timeliness', github: 'razum2um/validates_timeliness', ref: 'b195081f6aeead619430ad38b0f0dfe4d4981252'

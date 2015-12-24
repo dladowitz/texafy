@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'subscriptions/new'
+
+  get 'subscriptions/create'
+
+  get 'subscriptions/edit'
+
+  get 'subscriptions/destroy'
+
   root to: "landing_pages#landing"
 
   # custom routes
@@ -10,11 +18,13 @@ Rails.application.routes.draw do
   get    :request_password,        to: "password_resets#request_password", as: :request_password
   get    "/reset_password/:token", to: "password_resets#reset_password",   as: :reset_password
   patch  "/reset_password/:token", to: "password_resets#update",           as: :password_reset
-  post    "/contact",               to: "support#contact_us_email",         as: :contact_us           
+  post    "/contact",               to: "support#contact_us_email",         as: :contact_us
 
 
   # resource routes
-  resources :users
+  resources :users do
+    resources :subscriptions, only: [:new, :create, :edit, :destroy]
+  end
   resources :sessions, only: [:new, :create, :destroy]
   resources :password_resets, only: [:create]
 

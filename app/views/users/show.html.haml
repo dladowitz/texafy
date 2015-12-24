@@ -6,6 +6,16 @@
           Here is all your relevant info
       .ibox-content
         .row
+          %p
+            %strong Current Subscription
+            - if @user.subscription
+              = @user.subscription.level
+            - else
+              None
+          %p
+            = link_to "Add Subscription", new_user_subscription_path(@user), class: 'btn btn-primary'    
+
+        .row.mt100
           = link_to "Update Account", edit_user_path(@user), class: "btn btn-primary ml10"
 
           .posts.m-t-lg

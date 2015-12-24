@@ -1,0 +1,13 @@
+%h1 Sign up for a monthly plan today
+
+.col-md-4
+  = simple_form_for [@user, @subscription] do |f|
+    = f.input :level, as: :select, selected: "Silver $9.99", collection: {"Silver - $9.99" => 101, "Gold - $29.99 - Coming Soon" => 102 }
+    .actions
+      -# Not sure how to track this event
+      %script#garage.stripe-button{ src: "https://checkout.stripe.com/checkout.js", data: {amount: 999, description: "Card Info", key: ENV["STRIPE_PUBLISHABLE_KEY"]}}
+      %script#seed.stripe-button{ src: "https://checkout.stripe.com/checkout.js", data: {amount: 1100, description: "Card Info", key: ENV["STRIPE_PUBLISHABLE_KEY"]}}
+
+
+:javascript
+  console.log("new subscription page javascript working")

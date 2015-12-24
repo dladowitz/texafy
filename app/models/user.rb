@@ -10,6 +10,7 @@
 #  admin           :boolean
 #  created_at      :datetime
 #  updated_at      :datetime
+#  stripe_id       :integer
 #
 
 class User < ActiveRecord::Base
@@ -23,6 +24,7 @@ class User < ActiveRecord::Base
 
   has_secure_password
   has_many :password_resets
+  has_one :subscription
 
 
   ### Instance Methods
