@@ -8,7 +8,7 @@ class UserMailer < ApplicationMailer
     @registration = registration
     attachments.inline['logo_handwriting.png'] = File.read('app/assets/images/logo_handwriting.png')
 
-    mail(to: @registration.email, subject: "Little Cat Labs - Registration")
+    mail(to: @registration.email, subject: "Markafy - Registration")
   end
 
   def signup_email(user)
@@ -29,6 +29,6 @@ class UserMailer < ApplicationMailer
     @reset_link = RESET_LINK_BASE + token
     attachments.inline['logo_handwriting.png'] = File.read('app/assets/images/logo_handwriting.png')
 
-    mail(to: @user.email, subject: "Little Cat Labs - Password Reset")
+    mail(to: @user.email, subject: "Markafy - Password Reset")
   end
 end
