@@ -13,9 +13,15 @@ class UserMailer < ApplicationMailer
 
   def signup_email(user)
     @user = user
-    attachments.inline['logo_handwriting.png'] = File.read('app/assets/images/logo_handwriting.png')
+    # attachments.inline['logo_handwriting.png'] = File.read('app/assets/images/logo_handwriting.png')
 
-    mail(to: @user.email, subject: "Little Cat Labs - Signup")
+    mail(to: @user.email, subject: "Markafy - Signup")
+  end
+
+  def alert_signup_email(user)
+    @user = user
+
+    mail(to: ["david@tradecrafted.com", "marshall@tradecrafted.com"], subject: "Markafy - Signup")
   end
 
   def request_password(user, token)
