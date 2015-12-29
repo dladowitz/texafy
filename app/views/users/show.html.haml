@@ -14,18 +14,7 @@
                 = link_to "Add Subscription", new_user_subscription_path(@user), class: 'btn btn-primary'
 
             - else @user.subscription
-              - case @user.subscription.level
-              - when 101
-                Two Guys in a Garage - $5.50/mo
-              - when 102
-                Seed Money - $11/mo
-              - when 103
-                Venture Capital - $25/mo
-              - when 104
-                IPO - $50/mo
-              - else
-                = @user.subscription.level
-
+              = "#{@user.subscription.level_in_words} - #{number_to_currency(@user.subscription.price, precision: 0)}/mo"
               %p.mt20
                 = link_to "Cancel Subscription", edit_user_subscription_path(@user, @user.subscription), class: 'btn btn-primary'
 

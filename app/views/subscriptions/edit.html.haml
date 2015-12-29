@@ -7,19 +7,7 @@
       %strong Current Subscription:
       %br
       - if @user.subscription
-        - case @user.subscription.level
-        - when 101
-          Two Guys in a Garage - $5.50/mo
-        - when 102
-          Seed Money - $11/mo
-        - when 103
-          Venture Capital - $25/mo
-        - when 104
-          IPO - $50/mo
-        - when 0
-          None
-        - else
-          = @user.subscription.level
+        = "#{@user.subscription.level_in_words} - #{number_to_currency(@user.subscription.price, precision: 0)}/mo"
 
         %br
         %br
