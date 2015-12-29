@@ -38,13 +38,13 @@ class Subscription < ActiveRecord::Base
     when 0
       0
     when 101
-      5.50
+      6.00
     when 102
-      11.00
+      7.00
     when 103
-      25.00
+      14.00
     when 104
-      50.00
+      28.00
     else
       self.level
     end
