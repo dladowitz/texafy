@@ -13,7 +13,7 @@
                 %tr
                   %td 4 Markers
           %footer.panel-footer
-            %script.stripe-button{ src: "https://checkout.stripe.com/checkout.js", data: {amount: 550, description: "Two Guys in a Garage", key: ENV["STRIPE_PUBLISHABLE_KEY"]}}
+            %script.stripe-button{ src: "https://checkout.stripe.com/checkout.js", data: {amount: 600, description: "Two Guys in a Garage", key: ENV["STRIPE_PUBLISHABLE_KEY"]}}
 
       #seed{style: "display: none"}
         .panel.panel-default
@@ -23,7 +23,7 @@
                 %tr
                   %td 8 Markers
           %footer.panel-footer
-            %script.stripe-button{src: "https://checkout.stripe.com/checkout.js", data: {amount: 1100, description: "Seed Money", key: ENV["STRIPE_PUBLISHABLE_KEY"]}}
+            %script.stripe-button{src: "https://checkout.stripe.com/checkout.js", data: {amount: 700, description: "Seed Money", key: ENV["STRIPE_PUBLISHABLE_KEY"]}}
 
       #venture{style: "display: none"}
         .panel.panel-default
@@ -35,7 +35,7 @@
                 %tr.active
                   %td 1 Eraser
           %footer.panel-footer
-            %script.stripe-button{src: "https://checkout.stripe.com/checkout.js", data: {amount: 2500, description: "Venture Capital", key: ENV["STRIPE_PUBLISHABLE_KEY"]}}
+            %script.stripe-button{src: "https://checkout.stripe.com/checkout.js", data: {amount: 1400, description: "Venture Capital", key: ENV["STRIPE_PUBLISHABLE_KEY"]}}
 
       #ipo{style: "display: none"}
         .panel.panel-default
@@ -47,7 +47,7 @@
                 %tr.active
                   %td 3 Erasers
           %footer.panel-footer
-            %script.stripe-button{src: "https://checkout.stripe.com/checkout.js", data: {amount: 5000, description: "IPO", key: ENV["STRIPE_PUBLISHABLE_KEY"]}}
+            %script.stripe-button{src: "https://checkout.stripe.com/checkout.js", data: {amount: 2800, description: "IPO", key: ENV["STRIPE_PUBLISHABLE_KEY"]}}
 
 :javascript
   console.log("new subscription page javascript working")
