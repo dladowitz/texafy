@@ -2,6 +2,20 @@
 %html(lang="en-US")
   %head
     %title Markafy
+    %link{:href => "http://www.markafy.com", :rel => "canonical"}/
+    %meta{:content => "Markafy", :property => "og:site_name"}/
+    %meta{:content => "Markafy", :property => "og:title"}/
+    %meta{:content => "http://www.markafy.com", :property => "og:url"}/
+    %meta{:content => "website", :property => "og:type"}/
+    %meta{:content => "Its pretty simple. Your company goes through whiteboard markers every month. We make sure you always have enough on hand.", :property => "og:description"}/
+    %meta{:content => "http://www.markafy.com/assets/background/hero_text_2.png", :property => "og:image"}/
+    %meta{:content => "Markafy", :itemprop => "name"}/
+    %meta{:content => "http://www.markafy.com", :itemprop => "url"}/
+    %meta{:content => "Markafy", :name => "twitter:title"}/
+    %meta{:content => "http://www.markafy.com", :name => "twitter:url"}/
+    %meta{:content => "summary", :name => "twitter:card"}/
+    %meta{:content => "", :name => "description"}/
+
     = stylesheet_link_tag    'guest_pages/guest', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'guest_pages/guest', 'data-turbolinks-track' => true
     = csrf_meta_tags
