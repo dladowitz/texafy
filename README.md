@@ -1,0 +1,1 @@
+Run `rake db:seed` to create the first user with admin rights.
