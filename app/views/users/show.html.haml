@@ -5,18 +5,18 @@
         %h3
           Here is all your relevant info
       .ibox-content
-        .row
-          %h2.col-sm-10
-            %strong Subscription:
-            - if !@user.subscription || @user.subscription.level == 0
-              None
-              %p.mt20
-                = link_to "Add Subscription", new_user_subscription_path(@user), class: 'btn btn-primary'
-
-            - else @user.subscription
-              = "#{@user.subscription.level_in_words} - #{number_to_currency(@user.subscription.price, precision: 0)}/mo"
-              %p.mt20
-                = link_to "Cancel Subscription", edit_user_subscription_path(@user, @user.subscription), class: 'btn btn-primary'
+        -# .row
+        -#   %h2.col-sm-10
+        -#     %strong Subscription:
+        -#     - if !@user.subscription || @user.subscription.level == 0
+        -#       None
+        -#       %p.mt20
+        -#         = link_to "Add Subscription", new_user_subscription_path(@user), class: 'btn btn-primary'
+        -#
+        -#     - else @user.subscription
+        -#       = "#{@user.subscription.level_in_words} - #{number_to_currency(@user.subscription.price, precision: 0)}/mo"
+        -#       %p.mt20
+        -#         = link_to "Cancel Subscription", edit_user_subscription_path(@user, @user.subscription), class: 'btn btn-primary'
 
         %hr
         .row
