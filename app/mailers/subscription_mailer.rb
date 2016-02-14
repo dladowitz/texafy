@@ -7,6 +7,6 @@ class SubscriptionMailer < ApplicationMailer
     @subscription = subscription
     # attachments.inline['logo_handwriting.png'] = File.read('app/assets/images/logo_handwriting.png')
 
-    mail(subject: "Markafy - Holy Shit, Someone Just Bought a Subscription")
+    mail(subject: "Thinkafy - Holy Shit, Someone Just Bought a Subscription")
   end
 end

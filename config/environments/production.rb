@@ -69,7 +69,7 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.default_url_options = {
-    :host => "markafy.heroku.com"
+    :host => "thinkafy.heroku.com"
   }
 
   # mailgun, not really sure what mailgun account this is using. Maybe some default thing from heroku?
@@ -78,7 +78,7 @@ Rails.application.configure do
     :address        => ENV['MAILGUN_SMTP_SERVER'],
     :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
     :password       => ENV['MAILGUN_SMTP_PASSWORD'],
-    :domain         => 'markafy.heroku.com',
+    :domain         => 'thinkafy.heroku.com',
     :authentication => :plain,
   }
 
@@ -86,7 +86,7 @@ Rails.application.configure do
   # config.action_mailer.smtp_settings = {
   #   address:              "smtp.gmail.com",
   #   port:                 587,
-  #   domain:               "markafy.com",
+  #   domain:               "thinkafy.com",
   #   user_name:            ENV["GMAIL_USERNAME"],
   #   password:             ENV["GMAIL_PASSWORD"],
   #   authentication:       "plain",
