@@ -40,7 +40,7 @@ group :development, :test do
   gem 'letter_opener'
   gem 'pry-byebug'
   gem 'quiet_assets'
-  gem 'rspec-rails', '~> 3.0.0'
+  gem 'rspec-rails', '~> 3.1'
   gem 'sqlite3'
 end
 

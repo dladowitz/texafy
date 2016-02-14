@@ -1,12 +1,4 @@
 Rails.application.routes.draw do
-  get 'subscriptions/new'
-
-  get 'subscriptions/create'
-
-  get 'subscriptions/edit'
-
-  get 'subscriptions/destroy'
-
   root to: "landing_pages#landing"
 
   # custom routes
@@ -23,7 +15,11 @@ Rails.application.routes.draw do
 
   # resource routes
   resources :users do
-    resources :subscriptions, only: [:new, :create, :edit, :destroy]
+    resources :subscriptions, only: [:new, :create] do
+      # there is only one subscription per user so no need to send subscription id
+      get    'edit',    on: :collection
+      delete 'destroy', on: :collection
+    end
   end
   resources :sessions, only: [:new, :create, :destroy]
   resources :password_resets, only: [:create]

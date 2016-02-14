@@ -19,8 +19,8 @@ class UsersController < ApplicationController
       flash[:success] = "You did it. You successfully signed up. Hi-five!"
 
       #TODO Mailer should be sent asyncronously. Need to change so not to hold up the controller
-      UserMailer.signup_email(@user).deliver
-      UserMailer.signup_alert_email(@user).deliver
+      UserMailer.signup_email(@user).deliver_now
+      UserMailer.signup_alert_email(@user).deliver_now
 
       session[:id] = @user.id
       redirect_to user_path(@user)

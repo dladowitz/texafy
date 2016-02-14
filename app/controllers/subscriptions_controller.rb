@@ -14,7 +14,7 @@ class SubscriptionsController < ApplicationController
       # Maybe change the plan name on stripe
       stripe_customer = Stripe::Customer.create( source: params["stripeToken"], plan: subscription_params[:level], email: params["stripeEmail"] )
       @user.update_attributes(stripe_id: stripe_customer.id)
-      SubscriptionMailer.new_subscription_alert_email(@user, @subscription).deliver
+      SubscriptionMailer.new_subscription_alert_email(@user, @subscription).deliver_now
       @subscription.save
 
       redirect_to @user, notice: 'Registration was successfully created.'
