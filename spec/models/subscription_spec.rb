@@ -1,5 +1,11 @@
 require 'rails_helper'
 
-RSpec.describe Subscription, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Subscription do
+  it { should validate_presence_of :user_id }
+  it { should validate_presence_of :level }
+
+  it "has a valid factory" do
+    subscription = create :subscription
+    expect(subscription).to be_instance_of Subscription
+  end
 end

@@ -15,6 +15,7 @@
 
 class Subscription < ActiveRecord::Base
   belongs_to :user
+  validates :user_id, :level, presence: true
 
   def level_in_words
     case self.level

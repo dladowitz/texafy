@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :subscription do
-    user nil
+    user_id 1
     level 1
   end
 end

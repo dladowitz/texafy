@@ -34,12 +34,4 @@ RSpec.describe SubscriptionsController, :type => :controller do
       expect(response).to be_success
     end
   end
-
-  # describe "GET destroy" do
-  #   it "returns http success" do
-  #     get :destroy, user_id: @user.id
-  #     expect(response).to be_success
-  #   end
-  # end
-
 end
