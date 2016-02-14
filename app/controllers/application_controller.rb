@@ -3,6 +3,9 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  #brings in helpers/application_helper.rb for use in controllers
+  include ApplicationHelper 
+
   rescue_from CanCan::AccessDenied do |exception|
     flash[:danger] = "You are not authorized for this page. All your bases are belong to us."
     redirect_to user_path(current_user)
@@ -17,16 +20,4 @@ class ApplicationController < ActionController::Base
     User.find session[:id] if session[:id]
   end
   helper_method :current_user  #makes available in view
-
-  def project_name
-    Rails.application.config.project_name
-  end
-
-  def mail_domain
-    Rails.application.config.mail_domain
-  end
-
-  def project_description
-    Rails.application.config.project_description
-  end
 end
