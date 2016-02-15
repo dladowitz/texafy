@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   patch  "/reset_password/:token", to: "password_resets#update",           as: :password_reset
   post    "/contact",               to: "support#contact_us_email",         as: :contact_us
 
-  resources :students, only: [:index]
+  resources :academics, only: [:index]
 
   # resource routes
   resources :users do

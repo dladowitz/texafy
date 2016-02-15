@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe StudentsController do
+describe AcademicsController do
   describe "GET index" do
     subject { get :index }
 

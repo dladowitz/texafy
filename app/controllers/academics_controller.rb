@@ -1,4 +1,4 @@
-class StudentsController < ApplicationController
+class AcademicsController < ApplicationController
   def index
 
     # results = ldap_search("Adam*")
