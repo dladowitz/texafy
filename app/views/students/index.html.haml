@@ -3,4 +3,8 @@
 %h3 Students in our database:
 -# = @students.count
 
-= "Project name: #{project_name}"
+
+%hr
+.row.mt100
+  .text-left
+    = link_to "Get Some Students", students_path(api_request: "on"), class: "btn btn-warning"
