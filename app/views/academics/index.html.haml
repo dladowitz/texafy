@@ -9,10 +9,18 @@
 
         %h3
           Academics in our database:
-          = @academcis ? @academcis.count : 0
+          = @academics ? @academics.count : 0
 
 
         %hr
         .row.mt100
           .text-center
             = link_to "Get Some Adademics", academics_path(api_request: "on"), class: "btn btn-warning"
+
+      - if @start
+        .row.mt50.ml20
+          %h1 Results from this run
+          %h2= "Variations searched on #{@start}:#{@variations}:#{@stop}"
+          %h2= "#{@entries} records found in UT of A directroy."
+          %h2= "#{@created} records saved to local database."
+          %h2= "#{@not_created} NOT records saved to local database."
