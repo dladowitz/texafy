@@ -19,4 +19,5 @@
 
 class Academic < ActiveRecord::Base
   validates :first_name, :last_name, :email, :role, :uta_id, presence: true
+  validates :email, :uta_id, uniqueness: true
 end

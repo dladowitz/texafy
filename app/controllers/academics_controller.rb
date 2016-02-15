@@ -1,8 +1,10 @@
 class AcademicsController < ApplicationController
   def index
+    if params[:api_request] == "on"
+      results = ldap_search("ssp22*")
+    end
 
-    # results = ldap_search("Adam*")
-
+    @academics = Academic.all
   end
 
 
@@ -16,7 +18,7 @@ class AcademicsController < ApplicationController
            :method => :anonymous,
      }
 
-    filter = Net::LDAP::Filter.eq("cn", query)
+    filter = Net::LDAP::Filter.eq("uid", query)
     treebase = "dc=directory,dc=utexas,dc=edu"
 
     results = []
@@ -28,10 +30,23 @@ class AcademicsController < ApplicationController
         values.each do |value|
           puts "      --->#{value}"
         end
+
+
+        binding.pry
+        Academic.create( uta_id: entry[:uid].first,
+                          first_name: entry[:givenname].first,
+                          last_name: entry[:sn].first,
+                          email: entry[:mail].first,
+                          role: entry[:utexasedupersonprimarypubaffiliation].first,
+                          employee_title: entry[:title].first,
+                          student_level: entry[:utexasedupersonclassification].first,
+                          college: entry[:utexasedupersonschool].first ? entry[:utexasedupersonschool].first : entry[:utexasedupersonprimaryorgunitname].first,
+                          major: entry[:utexasedupersonmajor].first,
+                          phone: entry[:homephone].first ? entry[:homephone].first : entry[:telephonenumber]
+                        )
       end
     end
 
-    binding.pry
     return results
   end
 end

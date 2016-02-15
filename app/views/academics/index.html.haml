@@ -1,10 +1,18 @@
-%h1 Students
+.row
+  .col-lg-10
+    .ibox.float-e-margins
+      .ibox-title
+        %h3
+          Here is all your relevant info
+      .ibox-content
+        %h1 Acaemdics
 
-%h3 Students in our database:
--# = @students.count
+        %h3
+          Academics in our database:
+          = @academcis ? @academcis.count : 0
 
 
-%hr
-.row.mt100
-  .text-left
-    = link_to "Get Some Students", students_path(api_request: "on"), class: "btn btn-warning"
+        %hr
+        .row.mt100
+          .text-center
+            = link_to "Get Some Adademics", academics_path(api_request: "on"), class: "btn btn-warning"
