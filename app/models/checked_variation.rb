@@ -12,5 +12,13 @@
 
 class CheckedVariation < ActiveRecord::Base
   validates :letters, :position, :entries, presence: true
-  validates :letters, :position, uniqueness: true
+  validates :letters, uniqueness: true
+
+
+  def self.create_or_update(options)
+    checked_variation = CheckedVariation.find_or_create_by(letters: options[:letters])
+    checked_variation.update(options)
+    puts checked_variation.persisted?
+  end
+
 end

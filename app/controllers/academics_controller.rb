@@ -28,7 +28,9 @@ class AcademicsController < ApplicationController
         puts "\n>>>>>>>>>>>>>>>> #{@created} total records created this run <<<<<<<<<<<<<<<<<<<\n"
         puts "\n<<<<<<<<<<<<<<<< #{@not_created} records skipped this run  >>>>>>>>>>>>>>>>>\n"
         puts "\n//////////////// Sleeping for #{sleep_time} ///////////////////////////\n"
+
         CheckedVariation.create(letters: variation, position: @search_count, entries: @entries_this_variation)
+
         sleep sleep_time
         @search_count += 1
       end
