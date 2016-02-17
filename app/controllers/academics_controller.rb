@@ -7,25 +7,28 @@ class AcademicsController < ApplicationController
 
       # Getting an array of 3 letter variations
       # total variations = 17576
-      @start = 2000
-      @stop = 2028
+      @start = 0
+      @stop = 5
       @search_count = @start
       @variations = alphabet_variations(@start, @stop)
-      @entries = 0
+      @enties_this_run = 0
       @created = 0
       @not_created = 0
 
       # Running each variation through the ldap search
       @variations.each do |variation|
+        @entries_this_variation = 0
         ldap_search_and_create(variation + "*")
 
         # pause so we don't get blocked
         sleep_time = rand(10)
-        puts "\n---------------- Variation #{variation}. Search #{@search_count} of #{@stop} -----------\n"
-        puts "\n++++++++++++++++ #{@entries} records found so far +++++++++++++++++++++\n"
-        puts "\n>>>>>>>>>>>>>>>> #{@created} records created so far <<<<<<<<<<<<<<<<<<<\n"
-        puts "\n<<<<<<<<<<<<<<<< #{@not_created} records NOT created  >>>>>>>>>>>>>>>>>\n"
+        puts "\n---------------- Variation #{variation}. #{@entries_this_variation} entries found -----------\n"
+        puts "\n---------------- Search #{@search_count} of #{@stop} -----------\n"
+        puts "\n++++++++++++++++ #{@entries_this_run} total records found this run +++++++++++++++++++++\n"
+        puts "\n>>>>>>>>>>>>>>>> #{@created} total records created this run <<<<<<<<<<<<<<<<<<<\n"
+        puts "\n<<<<<<<<<<<<<<<< #{@not_created} records skipped this run  >>>>>>>>>>>>>>>>>\n"
         puts "\n//////////////// Sleeping for #{sleep_time} ///////////////////////////\n"
+        CheckedVariation.create(letters: variation, position: @search_count, entries: @entries_this_variation)
         sleep sleep_time
         @search_count += 1
       end
@@ -49,7 +52,8 @@ class AcademicsController < ApplicationController
     treebase = "dc=directory,dc=utexas,dc=edu"
 
     ldap.search(:base => treebase, :filter => filter) do |entry|
-      @entries += 1
+      @entries_this_variation += 1
+      @entries_this_run += 1
 
       puts "DN: #{entry.dn}"
       entry.each do |attribute, values|

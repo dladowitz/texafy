@@ -34,3 +34,5 @@ output = ["AAA", "AAB", "AAC", "AAD", "AAE", "AAF", "AAG", "AAH", "AAI", "AAJ", 
 
 ('aaa'..'zzz').to_a.uniq
 total = 17576
+
+# ip = 76.103.214.216

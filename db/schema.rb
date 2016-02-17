@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160217062936) do
+ActiveRecord::Schema.define(version: 20160217065344) do
 
   create_table "academics", force: :cascade do |t|
     t.string   "uta_id"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20160217062936) do
     t.integer  "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "entries"
   end
 
   create_table "password_resets", force: :cascade do |t|

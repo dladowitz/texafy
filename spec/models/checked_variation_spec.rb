@@ -3,6 +3,7 @@ require 'rails_helper'
 describe CheckedVariation do
   it { should validate_presence_of :letters }
   it { should validate_presence_of :position }
+  it { should validate_presence_of :entries }
 
   it "has a valid factory" do
     checked_variation = create :checked_variation
