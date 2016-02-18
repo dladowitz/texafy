@@ -8,9 +8,12 @@
         %h1 Acaemdics
 
         %h3
-          Academics in our database:
+          %strong Academics in our database:
           = @academics ? @academics.count : 0
 
+        %h3
+          %strong Check Variations in our database:
+          = @checked_variations ? @checked_variations.count : 0
 
         %hr
         .row.mt100
@@ -20,7 +23,8 @@
       - if @start
         .row.mt50.ml20
           %h1 Results from this run
-          %h2= "Variations searched on #{@start}:#{@variations}:#{@stop}"
-          %h2= "#{@entries} records found in UT of A directroy."
+          %h2= "Searched from position #{@start} to #{@stop}."
+          %h2= "#{@entries_this_run} records found in UT of A directroy."
           %h2= "#{@created} records saved to local database."
-          %h2= "#{@not_created} NOT records saved to local database."
+          %h2= "#{@not_created} SKIPPED records saved to local database."
+          %h2= "Variations searched: #{@variations}}"

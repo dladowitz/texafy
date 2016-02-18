@@ -7,11 +7,11 @@ class AcademicsController < ApplicationController
 
       # Getting an array of 3 letter variations
       # total variations = 17576
-      @start = 0
-      @stop = 5
+      @start = 16600
+      @stop = 17576
       @search_count = @start
       @variations = alphabet_variations(@start, @stop)
-      @enties_this_run = 0
+      @entries_this_run = 0
       @created = 0
       @not_created = 0
 
@@ -21,15 +21,15 @@ class AcademicsController < ApplicationController
         ldap_search_and_create(variation + "*")
 
         # pause so we don't get blocked
-        sleep_time = rand(10)
-        puts "\n---------------- Variation #{variation}. #{@entries_this_variation} entries found -----------\n"
+        sleep_time = rand(3)
+        puts "\n---------------- Variation \'#{variation.upcase}\'. #{@entries_this_variation} entries found. -----------\n"
         puts "\n---------------- Search #{@search_count} of #{@stop} -----------\n"
-        puts "\n++++++++++++++++ #{@entries_this_run} total records found this run +++++++++++++++++++++\n"
-        puts "\n>>>>>>>>>>>>>>>> #{@created} total records created this run <<<<<<<<<<<<<<<<<<<\n"
-        puts "\n<<<<<<<<<<<<<<<< #{@not_created} records skipped this run  >>>>>>>>>>>>>>>>>\n"
-        puts "\n//////////////// Sleeping for #{sleep_time} ///////////////////////////\n"
+        puts "\n++++++++++++++++ #{@entries_this_run} total records found this run. +++++++++++++++++++++\n"
+        puts "\n>>>>>>>>>>>>>>>> #{@created} total records created this run. <<<<<<<<<<<<<<<<<<<\n"
+        puts "\n<<<<<<<<<<<<<<<< #{@not_created} records skipped this run.  >>>>>>>>>>>>>>>>>\n"
+        puts "\n//////////////// Sleeping for #{sleep_time} seconds. ///////////////////////////\n"
 
-        CheckedVariation.create(letters: variation, position: @search_count, entries: @entries_this_variation)
+        CheckedVariation.create_or_update(letters: variation, position: @search_count, entries: @entries_this_variation)
 
         sleep sleep_time
         @search_count += 1
@@ -37,6 +37,7 @@ class AcademicsController < ApplicationController
     end
 
     @academics = Academic.all
+    @checked_variations = CheckedVariation.all
   end
 
 
