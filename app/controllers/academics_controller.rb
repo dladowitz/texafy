@@ -7,7 +7,7 @@ class AcademicsController < ApplicationController
 
       # Getting an array of 3 letter variations
       # total variations = 17576
-      @start = 16600
+      @start = 17033
       @stop = 17576
       @search_count = @start
       @variations = alphabet_variations(@start, @stop)
